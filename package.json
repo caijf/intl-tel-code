@@ -1,0 +1,25 @@
+{
+  "name": "intl-tel-code",
+  "version": "1.0.0",
+  "main": "./dist/intl-tel-code.umd.js",
+  "module": "./dist/intl-tel-code.es.js",
+  "scripts": {
+    "test": "jest",
+    "build": "rm -rf ./dist && rollup --config"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": "git@github.com:caijf/intl-tel-code.git",
+  "author": "caijf <369756941@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "@types/jest": "^28.1.1",
+    "babel-jest": "^28.1.1",
+    "jest": "^28.1.1",
+    "rollup": "^2.75.6",
+    "rollup-plugin-terser": "^7.0.2"
+  }
+}
