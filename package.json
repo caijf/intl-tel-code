@@ -4,13 +4,16 @@
   "main": "dist/intl-tel-code.cjs.js",
   "module": "dist/intl-tel-code.es.js",
   "unpkg": "dist/intl-tel-code.umd.js",
+  "types": "types/index.d.ts",
   "scripts": {
     "test": "jest",
-    "build": "rm -rf ./dist && rollup -c",
+    "build": "rm -rf ./dist && rollup -c && npm run build:types",
+    "build:types": "rm -rf ./types && tsc -p tsconfig.build.json -d --outDir types --emitDeclarationOnly",
     "prepublishOnly": "npm test && npm run build"
   },
   "files": [
-    "dist"
+    "dist",
+    "types"
   ],
   "repository": "git@github.com:caijf/intl-tel-code.git",
   "author": "caijf <369756941@qq.com>",

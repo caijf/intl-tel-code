@@ -12,6 +12,7 @@ coverage
 build
 zip
 dist
+types
 
 # logs
 *.log
