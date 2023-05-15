@@ -2,7 +2,7 @@
 
 > 数据参考：[国际电话区号列表](https://zh.wikipedia.org/wiki/国际电话区号列表)
 
-支持 `es` `umd` 格式。
+支持 `es` `cjs` `umd` 模块规范。
 
 ## 使用
 
