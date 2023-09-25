@@ -8,14 +8,16 @@
 
 ### 安装
 
-```bash
+```shell
 npm install intl-tel-code
 ```
 
-或
-
-```bash
+```shell
 yarn add intl-tel-code
+```
+
+```shell
+pnpm add intl-tel-code
 ```
 
 ---
