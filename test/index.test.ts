@@ -5,6 +5,10 @@ describe("intlTelCode", () => {
     expect(intlTelCode).toBeDefined();
   });
 
+  it("length", () => {
+    expect(intlTelCode.length).toBe(229);
+  })
+
   it("properties", () => {
     intlTelCode.forEach(item => {
       expect(item.code).toBeTruthy();
