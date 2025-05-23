@@ -12,26 +12,26 @@ function toCamel(str) {
 const globalVarName = toCamel(pkg.name);
 
 export default {
-  input: "src/index.ts",
+  input: 'src/index.ts',
   output: [
     {
       file: `dist/${pkg.name}.es.js`,
-      format: "es",
+      format: 'es'
     },
     {
       file: `dist/${pkg.name}.cjs.js`,
-      format: "cjs",
+      format: 'cjs'
     },
     {
       file: `dist/${pkg.name}.umd.js`,
-      format: "umd",
+      format: 'umd',
       name: globalVarName,
       plugins: [terser()]
     }
   ],
   plugins: [
     typescript({
-      tsconfig: "./tsconfig.build.json"
+      tsconfig: './tsconfig.build.json'
     })
   ]
-}
+};
