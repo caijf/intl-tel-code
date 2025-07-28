@@ -9,9 +9,11 @@
     "test": "jest",
     "build": "rm -rf ./dist && rollup -c && npm run build:types",
     "build:types": "rm -rf ./types && tsc -p tsconfig.build.json -d --outDir types --emitDeclarationOnly",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "prettier": "prettier -w .",
     "prepublishOnly": "npm test && npm run build",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "files": [
     "dist",
@@ -20,25 +22,35 @@
   "repository": "git@github.com:caijf/intl-tel-code.git",
   "author": "caijf <369756941@qq.com>",
   "license": "MIT",
+  "lint-staged": {
+    "**/*.{js,mjs,jsx,ts,tsx}": "eslint",
+    "**/*.{css,scss,less,js,mjs,jsx,ts,tsx,json,md}": "prettier -w"
+  },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "@commitlint/cz-commitlint"
     }
   },
   "devDependencies": {
     "@commitlint/cli": "^17.8.1",
     "@commitlint/config-conventional": "^17.8.1",
+    "@commitlint/cz-commitlint": "^19.8.1",
+    "@eslint/js": "^9.32.0",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^12.1.4",
     "@types/jest": "^29.5.14",
-    "cz-conventional-changelog": "^3.3.0",
-    "husky": "^8.0.3",
+    "commitizen": "^4.3.1",
+    "eslint": "^9.32.0",
+    "globals": "^16.3.0",
+    "husky": "^9.1.7",
     "jest": "^29.7.0",
+    "lint-staged": "^15.5.2",
     "prettier": "^3.6.2",
     "rollup": "^4.46.0",
     "ts-jest": "^29.4.0",
     "tslib": "^2.8.1",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.38.0"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
